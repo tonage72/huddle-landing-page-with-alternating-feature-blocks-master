@@ -19,14 +19,6 @@ html {
 	/* font-family: 'Poppins', sans-serif; */
 }
 
-header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	width: clamp(100px, 90%, 500px)
-}
-
 body {
 	display: flex;
 	flex-flow: column nowrap;
@@ -37,8 +29,16 @@ body {
 	background-color: hsl(193, 100%, 96%);
 }
 
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: clamp(200px, 100%, 575px);
+	padding: 2rem 1rem 5rem 1rem;
+}
+
 main {
-	width: clamp(200px, 90%, 500px)
+	width: clamp(200px, 80%, 500px)
 }
 
 #header-logo img {
@@ -53,6 +53,23 @@ main {
 	border: none;
 	background-color: white;
 	box-shadow: 1px 1px 10px grey;
+}
+
+.about-grid {
+	display: grid;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	grid-template-columns: 
+		[c-start]
+		auto
+		[c-end];
+	grid-template-rows:
+		[r-start] min-content
+		[r-start-p] 1fr
+		[r-start-button] 50px
+		[r-start-img] min-content
+		[r-end];
 }
 
 .attribution {
