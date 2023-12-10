@@ -8,9 +8,51 @@
 	box-sizing: border-box;
 }
 
+img {
+	display: block;
+	width: 100%;
+}
+
 html {
 	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
 	/* font-family: 'Poppins', sans-serif; */
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	width: clamp(100px, 90%, 500px)
+}
+
+body {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100dvh;
+	background-image: url("../images/bg-hero-mobile.svg");
+	background-color: hsl(193, 100%, 96%);
+}
+
+main {
+	width: clamp(200px, 90%, 500px)
+}
+
+#header-logo img {
+	width: 125px;
+}
+
+#try-button {
+	width: 120px;
+	height: 1.5rem;
+	cursor: pointer;
+	border-radius: 1rem;
+	border: none;
+	background-color: white;
+	box-shadow: 1px 1px 10px grey;
 }
 
 .attribution {
