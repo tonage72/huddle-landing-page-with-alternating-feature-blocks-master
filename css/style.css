@@ -20,25 +20,23 @@ html {
 }
 
 body {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: center;
 	height: 100dvh;
-	background-image: url("../images/bg-hero-mobile.svg");
-	background-color: hsl(193, 100%, 96%);
 }
 
 header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: clamp(200px, 100%, 575px);
-	padding: 2rem 1rem 5rem 1rem;
+	width: 100%;
+	padding: 0 1rem 5rem 1rem;
 }
 
 main {
-	width: clamp(200px, 80%, 500px)
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
 }
 
 #header-logo img {
@@ -60,23 +58,48 @@ main {
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	grid-template-columns: 
-		[c-start]
-		auto
-		[c-end];
+	grid-template-columns: auto;
 	grid-template-rows:
-		[r-start] min-content
-		[r-start-p] 1fr
-		[r-start-button] 50px
-		[r-start-img] min-content
-		[r-end];
+		auto 
+		auto
+		auto
+		auto
+		auto;
+	grid-template-areas:
+		"header"
+		"headline"
+		"info-paragraph"
+		"get-started-button"
+		"mockups-image";
+	padding: 2rem 0 3rem 0;
+	background-image: url("../images/bg-hero-mobile.svg");
+	background-color: hsl(193, 100%, 96%);
 }
 
-.attribution {
-	font-size: 11px;
-	text-align: center;
+#header {
+	grid-area: header;
 }
 
-.attribution a {
-	color: hsl(228, 45%, 44%);
+#headline {
+	grid-area: headline;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#info-paragraph {
+	grid-area: info-paragraph;
+	padding-top: 2rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#get-started-button {
+	grid-area: get-started-button;
+}
+
+#mockups-image {
+	grid-area: mockups-image;
 }
