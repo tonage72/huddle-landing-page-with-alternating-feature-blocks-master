@@ -98,8 +98,17 @@ main {
 
 #get-started-button {
 	grid-area: get-started-button;
+	background-color: hsl(322, 100%, 66%);
+	width: clamp(20ch, 90%, 40ch);
+	border: none;
+	border-radius: 2rem;
+	color: white;
+	padding: 1lh 0 1lh 0;
+	margin: 2rem auto 3rem auto;
 }
 
 #mockups-image {
 	grid-area: mockups-image;
+	max-width: clamp(20ch, 90%, 60ch);
+	margin: 0 auto;
 }
