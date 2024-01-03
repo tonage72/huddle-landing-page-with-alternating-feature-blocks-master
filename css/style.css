@@ -27,8 +27,8 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 100%;
-	padding: 0 1rem 5rem 1rem;
+	width: 90%;
+	margin: 0 auto 5rem auto;
 }
 
 main {
@@ -36,8 +36,10 @@ main {
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: flex-start;
+	position: relative;
 	width: 100%;
 	background-color: hsl(0, 0%, 95%);
+	padding-bottom: 15rem;
 }
 
 #header-logo img {
@@ -45,7 +47,7 @@ main {
 }
 
 #try-button {
-	width: 120px;
+	width: 6rem;
 	height: 1.5rem;
 	cursor: pointer;
 	border-radius: 1rem;
@@ -101,11 +103,11 @@ main {
 #get-started-button {
 	grid-area: get-started-button;
 	background-color: hsl(322, 100%, 66%);
-	width: clamp(20ch, 90%, 40ch);
+	width: 13rem;
 	border: none;
 	border-radius: 2rem;
 	color: white;
-	padding: 1lh 0 1lh 0;
+	padding: .8rem 0 .8rem 0;
 	margin: 2rem auto 3rem auto;
 }
 
@@ -163,31 +165,11 @@ main {
 	width: 75%;
 }
 
-footer {
-	display: grid;
-	grid-template-columns: 75px 1fr;
-	grid-template-rows: auto auto auto auto auto;
-	grid-template-areas: 
-		"grid-ready-div grid-ready-div"
-		"grid-title grid-title"
-		"grid-location-icon grid-location-p"
-		"grid-phone-icon grid-phone-p"
-		"grid-mail-icon grid-mail-p"
-		"grid-menu grid-menu";
-	background-color: hsl(192, 100%, 9%);
-	color: white;
-	margin-top: 15rem;
-}
-
-footer img {
-	width: 15px;
-}
-
 .ready-card {
-	grid-area: grid-ready-div;
-	position: relative;
 	display: flex;
-	top: -3rem;
+	position: absolute;
+	width: 93%;
+	bottom: -4rem;
 	flex-flow: column;
 	font-size: .2rem;
 	color: black;
@@ -195,14 +177,35 @@ footer img {
 }
 
 .ready-card p {
-	margin: 0;
-	font-size: .95rem;
-	margin-top: 3rem;
+	font-size: 1rem;
+	margin: 2.5rem 0 0 0;
 	font-weight: 600;
+}
+
+footer {
+	display: grid;
+	grid-template-columns: .8rem 1fr;
+	grid-template-rows:
+		auto
+		auto
+		auto
+		auto
+		auto;
+	grid-template-areas: 
+		"grid-title grid-title"
+		"grid-location-icon grid-location-p"
+		"grid-phone-icon grid-phone-p"
+		"grid-mail-icon grid-mail-p"
+		"grid-menu grid-menu";
+	width: 100%;
+	padding: 0 .6rem 0 .6rem;
+	background-color: hsl(192, 100%, 9%);
+	color: white;
 }
 
 .footer-title {
 	grid-area: grid-title;
+	margin-top: 8rem;
 }
 
 .footer-title img {
