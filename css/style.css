@@ -190,13 +190,15 @@ footer {
 		auto
 		auto
 		auto
+		auto
 		auto;
 	grid-template-areas: 
 		"grid-title grid-title"
 		"grid-location-icon grid-location-p"
 		"grid-phone-icon grid-phone-p"
 		"grid-mail-icon grid-mail-p"
-		"grid-menu grid-menu";
+		"grid-menu grid-menu"
+		"grid-copyright grid-copyright";
 	width: 100%;
 	padding: 0 .6rem 0 .6rem;
 	background-color: hsl(192, 100%, 9%);
@@ -205,7 +207,7 @@ footer {
 
 .footer-title {
 	grid-area: grid-title;
-	margin-top: 8rem;
+	margin: 8rem 0 1.5rem 0;
 }
 
 .footer-title img {
@@ -237,6 +239,24 @@ footer {
 	grid-area: grid-mail-p;
 }
 
+footer > p:not(.copyright) {
+	margin: 0 0 1.5rem 1rem;
+	font-size: 1rem;
+}
+
+footer div:not(.footer-title) img {
+	padding-top: .35rem;
+}
+
 .footer-menu {
 	grid-area: grid-menu;
+	font-size: 1.2rem;
+	line-height: 3rem;
+	padding-top: 1rem;
+}
+
+.copyright {
+	grid-area: grid-copyright;
+	font-size: .8rem;
+	text-align: center;
 }
