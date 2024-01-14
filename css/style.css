@@ -199,6 +199,7 @@ footer {
 		auto
 		auto
 		auto
+		auto
 		auto;
 	grid-template-areas: 
 		"grid-title grid-title"
@@ -206,6 +207,7 @@ footer {
 		"grid-phone-icon grid-phone-p"
 		"grid-mail-icon grid-mail-p"
 		"grid-menu grid-menu"
+		"grid-social grid-social"
 		"grid-copyright grid-copyright";
 	width: 100%;
 	padding: 0 .6rem 0 .6rem;
@@ -252,7 +254,7 @@ footer > p:not(.copyright) {
 	font-size: 1rem;
 }
 
-footer div:not(.footer-title) img {
+footer div:not(.footer-title, .footer-social) img {
 	padding-top: .35rem;
 }
 
@@ -267,6 +269,20 @@ footer div:not(.footer-title) img {
 	grid-area: grid-copyright;
 	font-size: .8rem;
 	text-align: center;
+}
+
+.footer-social {
+	grid-area: grid-social;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	gap: 1rem;
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+}
+
+.footer-social img {
+	width: 30px;
 }
 
 @media (min-width: 1024px) {
@@ -294,6 +310,7 @@ footer div:not(.footer-title) img {
 	}
 
 	.card {
+		background-color: gray;
 		display: grid;
 		align-items: center;
 		justify-content: center;
@@ -310,5 +327,12 @@ footer div:not(.footer-title) img {
 		margin-top: 2rem;
 		border-radius: 1rem;
 		box-shadow: 2px 2px 10px rgb(212, 212, 212);
+	}
+
+	.card:nth-child(3) {
+		background-color: orange;
+		grid-template-areas:
+			"card-image card-title"
+			"card-image card-paragraph";
 	}
 }
