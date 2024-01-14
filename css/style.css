@@ -13,6 +13,10 @@ img {
 	width: 100%;
 }
 
+ul {
+	list-style-type: none;
+}
+
 html {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
@@ -334,5 +338,39 @@ footer div:not(.footer-title, .footer-social) img {
 		grid-template-areas:
 			"card-image card-title"
 			"card-image card-paragraph";
+	}
+
+	footer {
+		grid-template-columns:  .8rem 1fr 1fr 1fr;
+		grid-template-rows:
+			auto
+			auto
+			auto
+			auto
+			auto;
+		grid-template-areas:
+			"grid-title grid-title grid-title grid-title"
+			"grid-location-icon grid-location-p grid-menu grid-social"
+			"grid-phone-icon grid-phone-p grid-menu grid-social"
+			"grid-mail-icon grid-mail-p grid-menu grid-social"
+			". . . grid-copyright";
+	}
+
+	.footer-menu {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		padding: 0 0 0 2rem;
+		line-height: 2rem;
+		height: fit-content;
+		justify-content: center;
+	}
+
+	.footer-social {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding: 0 0 0 5rem;
 	}
 }
