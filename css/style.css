@@ -13,6 +13,10 @@ img {
 	width: 100%;
 }
 
+button {
+	cursor: pointer;
+}
+
 ul {
 	list-style-type: none;
 }
@@ -53,7 +57,6 @@ main {
 #try-button {
 	width: 6rem;
 	height: 1.5rem;
-	cursor: pointer;
 	border-radius: 1rem;
 	border: none;
 	background-color: white;
@@ -63,8 +66,8 @@ main {
 .about-grid {
 	display: grid;
 	align-items: center;
-	text-align: center;
 	justify-content: center;
+	text-align: center;
 	grid-template-columns: auto;
 	grid-template-rows:
 		auto 
@@ -84,7 +87,7 @@ main {
 	background-color: hsl(193, 100%, 96%);
 }
 
-#header {
+header {
 	grid-area: header;
 }
 
@@ -104,9 +107,10 @@ main {
 	margin: 0 auto;
 }
 
-#get-started-button {
+.get-started-button button {
 	grid-area: get-started-button;
 	background-color: hsl(322, 100%, 66%);
+	cursor: pointer;
 	width: 13rem;
 	border: none;
 	border-radius: 2rem;
@@ -117,7 +121,7 @@ main {
 
 #mockups-image {
 	grid-area: mockups-image;
-	max-width: clamp(20ch, 90%, 60ch);
+	max-width: clamp(20ch, 90vw, 60ch);
 	margin: 0 auto;
 }
 
@@ -155,7 +159,7 @@ main {
 .card-title {
 	grid-area: card-title;
 	font-family: 'Poppins', sans-serif;
-	font-size: clamp(1rem, 6vw, 2rem);
+	font-size: clamp(1rem, 6vw, 1.5rem);
 	font-weight: 600;
 	margin-bottom: 1.5ch;
 	width: 100%;
@@ -189,7 +193,7 @@ main {
 	font-weight: 600;
 }
 
-.ready-card #get-started-button {
+.ready-card .get-started-button botton {
 	font-size: clamp(.8rem, 3vw, 1.5rem);
 	width: clamp(9rem, 45%, 45%);
 }
@@ -289,19 +293,22 @@ footer div:not(.footer-title, .footer-social) img {
 	width: 30px;
 }
 
+footer a {
+	text-decoration: none;
+	color: white;
+}
+
 @media (min-width: 1024px) {
 
 	.about-grid {
 		display: grid;
-		align-items: center;
-		text-align: center;
-		justify-content: center;
-		grid-template-columns: auto auto;
+		text-align: left;
+		grid-template-columns: 1fr 65%;
 		grid-template-rows:
-			auto 
 			auto
+			1fr
 			auto
-			auto;
+			1fr;
 		grid-template-areas:
 			"header header"
 			"headline mockups-image"
@@ -313,13 +320,43 @@ footer div:not(.footer-title, .footer-social) img {
 		background-color: hsl(193, 100%, 96%);
 	}
 
+	header {
+		margin: 0 auto 2rem auto;
+	}
+
+	#mockups-image {
+		margin: 0 4rem 0 auto;
+	}
+
+	#headline {
+		align-self: flex-end;
+		margin: 0 0 0 3rem;
+		font-size: 2rem;
+	}
+
+	#info-paragraph {
+		align-self: flex-start;
+		margin: 1rem 0 1rem 3rem;
+		font-size: 1rem;
+		width: fit-content;
+		padding: 0;
+	}
+
+	.about-grid .get-started-button {
+		align-self: flex-start;
+		margin: 0 0 0 3rem;
+	}
+
+	.about-grid .get-started-button button {
+		margin: 0;
+	}
+
 	.card {
-		background-color: gray;
 		display: grid;
 		align-items: center;
 		justify-content: center;
-		text-align: center;
-		grid-template-columns: auto auto;
+		text-align: left;
+		grid-template-columns: 1fr 1fr;
 		grid-template-rows:
 			auto
 			auto;
@@ -333,8 +370,18 @@ footer div:not(.footer-title, .footer-social) img {
 		box-shadow: 2px 2px 10px rgb(212, 212, 212);
 	}
 
+	.card .card-title {
+		align-self: flex-end;
+		margin: 0 0 1rem 5rem;
+	}
+
+	.card .card-paragraph {
+		margin: 0 0 0 5rem;
+		font-size: .9rem;
+		align-self: flex-start;
+	}
+
 	.card:nth-child(3) {
-		background-color: orange;
 		grid-template-areas:
 			"card-image card-title"
 			"card-image card-paragraph";
@@ -371,6 +418,11 @@ footer div:not(.footer-title, .footer-social) img {
 		flex-flow: row nowrap;
 		align-items: flex-start;
 		justify-content: flex-start;
-		padding: 0 0 0 5rem;
+		padding: 0 0 0 4rem;
+	}
+
+	.copyright {
+		text-align: left;
+		padding-left: 4rem;
 	}
 }
